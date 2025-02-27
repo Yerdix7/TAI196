@@ -1,20 +1,13 @@
 
 from fastapi import FastAPI, HTTPException
 from typing import Optional, List
-from pydantic import BaseModel
-app= FastAPI(
+from modelsPydantic import modelUsuario
 
+app= FastAPI(
     title='Mi primer API 196',
     description='Jose Emmanuel Morales Aguillon',
     version='1.0.1'
 )
-
-#modelo para validacion de datos
-class modelUsuario(BaseModel):
-    id:int
-    nombre:str
-    edad:int
-    correo:str
 
 
 usuarios=[
